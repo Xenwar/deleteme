@@ -3,7 +3,7 @@ on:
     workflow_dispatch: 
 jobs:
   first_job:
-    name: the first job
+    name: job1
     runs-on: ubuntu-latest
     steps:
     - name: first step
@@ -13,7 +13,7 @@ jobs:
       run: pwd
 
   second_job:
-    name: the first job
+    name: job2
     runs-on: ubuntu-latest
     steps:
     - name: first step
@@ -30,5 +30,5 @@ jobs:
     - name: first step
       run: echo "hello world from the first step"
     
-    - name: second job
-      run: pwd
+    - name: third job
+      run: ls nothing/here
