@@ -31,4 +31,4 @@ jobs:
       run: echo "hello world from the first step"
     
     - name: third job
-      run: ls nothing/here
+      run: ls /
