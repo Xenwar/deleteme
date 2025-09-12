@@ -2,12 +2,22 @@ name: the first workflow
 on:
     workflow_dispatch: 
 jobs:
-    first_job:
-        name: the first job
-        runs-on: ubuntu-latest
-        steps:
-            - name: first step
-              run: echo "hello world from the first step"
-            
-            - name: second job
-              run: pwd
+  first_job:
+    name: the first job
+    runs-on: ubuntu-latest
+    steps:
+    - name: first step
+      run: echo "hello world from the first step"
+    
+    - name: second job
+      run: pwd
+
+  second_job:
+    name: the first job
+    runs-on: ubuntu-latest
+    steps:
+    - name: first step
+      run: echo "hello world from the first step"
+    
+    - name: second job
+      run: pwd
