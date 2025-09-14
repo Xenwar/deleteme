@@ -18,13 +18,11 @@ jobs:
         needs: terraform-network
         container: 
           image: node:17.6.0
-          volumes:
-            - ${{github.workspace}}:/code
         steps:
         - uses: actions/checkout@main
           with:
             path: code
-        - run: code/ansible_2.sh
+        - run: code/.github/workflow/ansible_2.sh
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
             # - run: /code/ansible_1.sh
