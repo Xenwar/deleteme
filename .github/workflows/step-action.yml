@@ -8,10 +8,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Show current location
+        run: echo "We are in $(pwd)"
+
       - name: Copy files
         run: echo "We are in $(pwd)"
         run: cp -r .github "$GITHUB_WORKSPACE/"    
-    
+
       - name: Hello Baeldung action step
         uses: ./ # Uses an Docker container action in the root directory
         id: hello
