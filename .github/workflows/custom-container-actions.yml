@@ -8,7 +8,9 @@ jobs:
             - ${{github.workspace}}:/code
 
         steps:
-            - run: pwd;echo;ls -lah -R /__w/_temp
+            - run: |
+                echo hello1
+                echo hello2
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
             # - run: /code/ansible_1.sh
