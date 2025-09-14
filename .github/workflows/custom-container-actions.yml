@@ -23,7 +23,7 @@ jobs:
           with:
             path: code
         - run: |
-            chmod a+x code/.github/workflows/scripts/*
+            # chmod a+x code/.github/workflows/scripts/*
             code/.github/workflows/scripts/ansible_1.sh
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
