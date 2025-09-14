@@ -22,7 +22,9 @@ jobs:
         - uses: actions/checkout@main
           with:
             path: code
-        - run: ./code/.github/workflows/ansible_2.sh
+        - run: |
+            chmod a+x code/.github/workflows/scripts/*
+            code/.github/workflows/ansible_1.sh
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
             # - run: /code/ansible_1.sh
