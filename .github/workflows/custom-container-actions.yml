@@ -8,7 +8,7 @@ jobs:
             - /code
 
         steps:
-            - run: pwd;echo;ls -lah $(pwd)/code/
+            - run: pwd;echo;ls -lah -R /code/
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
             # - run: /code/ansible_1.sh
