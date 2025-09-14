@@ -29,7 +29,7 @@ jobs:
                 ls -R code || true
                 ls -R /code || true
                 echo installing requirements
-                ls /workspaces/deleteme/.github/workflows/custom-container-actions.yml
+                ls code/.github/workflows/custom-container-actions.yml
                 echo run terraform code
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
