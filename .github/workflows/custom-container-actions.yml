@@ -1,15 +1,8 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
-on: 
-  workflow_dispatch:
+on: push
 jobs:
-    name: 'Hello World'
-    description: 'Greet someone and record the time'
-    env:
-      who-to-greet: 'World'
-
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
-      args:
-        - "The first user"
+    container-job:
+        runs-on: ubuntu-latest
+        container: node:17.6.0
+        steps:
+            - run: node --version
+            - run: npm --version
