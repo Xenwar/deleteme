@@ -21,8 +21,13 @@ jobs:
           volumes:
             - ${{github.workspace}}:/code
         steps:
-            - run: |
-                ls -R /github/workspace/
+        - uses: actions/checkout@master
+          with:
+            path: code
+        - run: |
+                ls -R .  || true
+                ls -R code | | true
+                ls -R /code || true
                 echo installing requirements
                 echo run terraform code
             # - run: /code/terraform_net.sh
