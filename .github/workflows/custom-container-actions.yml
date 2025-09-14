@@ -26,7 +26,7 @@ jobs:
             path: code
         - run: |
                 ls -R .  || true
-                ls -R code | | true
+                ls -R code || true
                 ls -R /code || true
                 echo installing requirements
                 echo run terraform code
