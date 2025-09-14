@@ -42,7 +42,7 @@ jobs:
 
     ansible-shcluster:
         runs-on: ubuntu-latest
-        needs: terraform-infra
+        needs: ansible-base
         container: 
           image: node:17.6.0
           volumes:
@@ -53,7 +53,7 @@ jobs:
                 echo run terraform code
     ansible-Idxcluster:
         runs-on: ubuntu-latest
-        needs: terraform-infra
+        needs: ansible-base
         container: 
           image: node:17.6.0
           volumes:
@@ -65,7 +65,7 @@ jobs:
 
     ansible-forwarder:
         runs-on: ubuntu-latest
-        needs: terraform-infra
+        needs: ansible-base
         container: 
           image: node:17.6.0
           volumes:
