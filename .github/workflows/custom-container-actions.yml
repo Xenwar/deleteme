@@ -5,7 +5,7 @@ jobs:
         container: 
           image: node:17.6.0
           volumes:
-            - ${local.env.GITHUB_WORKSPACE}/code:/code
+            - ${env.GITHUB_WORKSPACE}/code:/code
 
         steps:
             - run: /code/terraform_net.sh
