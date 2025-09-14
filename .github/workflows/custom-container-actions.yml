@@ -5,7 +5,7 @@ jobs:
         container: 
           image: node:17.6.0
           volumes:
-            - code:/code
+            - /home/runner/work/code:/code
 
         steps:
             - run: pwd;echo;ls -lah -R /code/
