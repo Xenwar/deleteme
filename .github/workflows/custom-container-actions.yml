@@ -4,5 +4,6 @@ jobs:
         runs-on: ubuntu-latest
         container: node:17.6.0
         steps:
-            - run: node --version
-            - run: npm --version
+            - run: ./terraform_net.sh
+            - run: ./terraform.sh
+            - run: ./ansible_1.sh
