@@ -8,7 +8,7 @@ jobs:
             - /home/runner/work/code:/code
 
         steps:
-            - run: pwd;echo;ls -lah -R /code/
+            - run: pwd;echo;ls -lah -R /github/workflow
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
             # - run: /code/ansible_1.sh
