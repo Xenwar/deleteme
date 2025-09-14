@@ -3,7 +3,11 @@ jobs:
     container-job:
         runs-on: ubuntu-latest
         container: node:17.6.0
+        volumes:
+        - code:/code
+        - /data/my_data
+        - /source/directory:/destination/directory
         steps:
-            - run: ./terraform_net.sh
-            - run: ./terraform.sh
-            - run: ./ansible_1.sh
+            - run: /code/terraform_net.sh
+            - run: /code/terraform.sh
+            - run: /code/ansible_1.sh
