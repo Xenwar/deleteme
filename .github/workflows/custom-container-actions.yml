@@ -2,6 +2,8 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: 
   workflow_dispatch:
+env:
+  who-to-greet: 'Thomas edisson'
 jobs:
     name: 'Hello World'
     description: 'Greet someone and record the time'
