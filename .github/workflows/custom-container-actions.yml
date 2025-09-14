@@ -1,7 +1,7 @@
 on: push
 
 jobs:
-    container-job:
+    terraform-network:
         runs-on: ubuntu-latest
         container: 
           image: node:17.6.0
@@ -10,13 +10,74 @@ jobs:
 
         steps:
             - run: |
-                echo hello1
-                echo hello2
+                echo installing requirements
+                echo run terraform code
 
+    terraform-infra:
+        runs-on: ubuntu-latest
+        container: 
+          image: node:17.6.0
+          volumes:
+            - ${{github.workspace}}:/code
+        steps:
+            - run: |
+                echo installing requirements
+                echo run terraform code
             # - run: /code/terraform_net.sh
             # - run: /code/terraform.sh
             # - run: /code/ansible_1.sh
+    ansible-base:
+        runs-on: ubuntu-latest
+        container: 
+          image: node:17.6.0
+          volumes:
+            - ${{github.workspace}}:/code
 
+        steps:
+            - run: |
+                echo installing requirements
+                echo run terraform code
+    ansible-shcluster:
+        runs-on: ubuntu-latest
+        container: 
+          image: node:17.6.0
+          volumes:
+            - ${{github.workspace}}:/code
+        steps:
+            - run: |
+                echo installing requirements
+                echo run terraform code
+    ansible-Idxcluster:
+        runs-on: ubuntu-latest
+        container: 
+          image: node:17.6.0
+          volumes:
+            - ${{github.workspace}}:/code
+        steps:
+            - run: |
+                echo installing requirements
+                echo run terraform code
+
+    ansible-forwarder:
+        runs-on: ubuntu-latest
+        container: 
+          image: node:17.6.0
+          volumes:
+            - ${{github.workspace}}:/code
+        steps:
+            - run: |
+                echo installing requirements
+                echo run terraform code
+    ansible-application:
+        runs-on: ubuntu-latest
+        container: 
+          image: node:17.6.0
+          volumes:
+            - ${{github.workspace}}:/code
+        steps:
+            - run: |
+                echo installing requirements
+                echo run terraform code
 # write a script with 5 steps, all of which are optitional
 # build a new image with script in it
 # run container based job with args set to 1 of the 5
