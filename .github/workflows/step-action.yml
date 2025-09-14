@@ -11,8 +11,7 @@ jobs:
       - name: Show current location
         run: echo "We are in $(pwd)"
 
-      - name: Copy files
-        run: echo "We are in $(pwd)"
+      - name: Copy filesv
         run: cp -r .github "$GITHUB_WORKSPACE/"    
 
       - name: Hello Baeldung action step
