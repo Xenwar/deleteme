@@ -1,11 +1,15 @@
-# action.yml
-name: 'Hello World'
-description: 'Greet someone and record the time'
-env:
-  who-to-greet: 'World'
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: 
+  workflow_dispatch:
+jobs:
+    name: 'Hello World'
+    description: 'Greet someone and record the time'
+    env:
+      who-to-greet: 'World'
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ vars.who-to-greet }}
+    runs:
+      using: 'docker'
+      image: 'Dockerfile'
+      args:
+        - ${{ vars.who-to-greet }}
